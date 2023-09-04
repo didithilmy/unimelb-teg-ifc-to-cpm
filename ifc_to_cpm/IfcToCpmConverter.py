@@ -42,7 +42,7 @@ class IfcToCpmConverterBuilder:
         building_name: str = None,
         dimension: Tuple[int, int] = None,
         origin: Tuple[int, int] = None,
-        round_function: function = None,
+        round_function = None,
     ):
         ifc_building = self.get_ifc_building(building_name)
         return IfcToCpmConverter(
@@ -61,7 +61,7 @@ class IfcToCpmConverter:
         unit_scale,
         dimension: Tuple[int, int] = None,
         origin: Tuple[int, int] = None,
-        round_function: function = None,
+        round_function = None,
     ):
         self.dimension = dimension
         if origin is None:
