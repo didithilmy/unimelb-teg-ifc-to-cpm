@@ -47,9 +47,10 @@ if validate_input():
 
     print("Converting IFC4 to CPM...")
 
-    from ifc_to_cpm.IfcToCpmConverter import IfcToCpmConverter
+    from ifc_to_cpm.IfcToCpmConverter import IfcToCpmConverterBuilder
 
-    IfcToCpmConverter(input_filename, origin=origin, dimension=dimension).write(
-        output_filename
-    )
+    IfcToCpmConverterBuilder(input_filename).build(
+        origin=origin, dimension=dimension
+    ).write(output_filename)
+
     print("Conversion complete!")
